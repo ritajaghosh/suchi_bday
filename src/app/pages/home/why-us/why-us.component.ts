@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./why-us.component.scss']
 })
 export class WhyUsComponent implements OnInit {
-  avatar = {ritja: 'https://live.staticflickr.com/65535/50588567573_8d9e8f1502_o.jpg'};
+  avatar = {
+    ritja: 'https://live.staticflickr.com/65535/50588567573_8d9e8f1502_o.jpg',
+    mou: 'https://live.staticflickr.com/65535/50589328831_be485ed9ce.jpg'
+  };
   constructor() { }
 
   ngOnInit(): void {
