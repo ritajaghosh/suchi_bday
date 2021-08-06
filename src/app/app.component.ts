@@ -87,7 +87,9 @@ export class AppComponent implements OnInit, OnDestroy{
   }
 
   scrollToTop() {
-    this.scroll.scrollToPosition([0,0]);
+    setTimeout(() => {
+      this.scroll.scrollToPosition([0, 0]);
+    }, 300);
   }
 }
 
