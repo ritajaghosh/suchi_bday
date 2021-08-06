@@ -11,6 +11,7 @@ import {CommonService} from './services/common.service';
 import {AuthService} from './services/auth.service';
 import * as AOS from 'aos';
 import {HttpClient} from '@angular/common/http';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,10 @@ export class AppComponent implements OnInit, OnDestroy{
   navFixed = false;
   private scrollOffset = 70;
   private projectData: any;
-  @HostListener('window:scroll')
+  private pageYoffset = 0;
+  @HostListener('window:scroll', ['$event']) onScroll(event){
+    this.pageYoffset = window.pageYOffset;
+  }
   onWindowScroll() {
     this.navFixed = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) > this.scrollOffset;
   }
@@ -51,7 +55,7 @@ export class AppComponent implements OnInit, OnDestroy{
               // tslint:disable-next-line:align
               , private authService: AuthService
               // tslint:disable-next-line:align
-              , private http: HttpClient) {
+              , private http: HttpClient, private scroll: ViewportScroller) {
     AOS.init();
     this.http.get('assets/ProjectData.json').subscribe((data: any) => {
       this.projectData = data;
@@ -80,6 +84,10 @@ export class AppComponent implements OnInit, OnDestroy{
   }
   ngOnDestroy(): void {
     this.mediaSub.unsubscribe();
+  }
+
+  scrollToTop() {
+    this.scroll.scrollToPosition([0,0]);
   }
 }
 
