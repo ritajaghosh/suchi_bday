@@ -10,12 +10,12 @@
             <button mat-menu-item (click)="logoutAll()">Logout from All Devices<i class="ri-logout-box-r-fill"></i> </button>
             <button mat-menu-item (click)="logout()">Logout from here <i class="ri-logout-circle-r-fill"></i> </button>
         </mat-menu>
-        <a (click)="drawer.toggle()" class="menu-toggle rounded" [routerLink]=""><i class="bi bi-list" ></i></a>
+        <a (click)="drawer.toggle()" *ngIf="false" class="menu-toggle rounded" [routerLink]=""><i class="bi bi-list" ></i></a>
         <br><br><br>
         <app-menu></app-menu>
     </mat-drawer>
 
-    <a (click)="drawer.toggle()" class="menu-toggle rounded" [routerLink]=""><i class="bi bi-list" ></i></a>
+    <a (click)="drawer.toggle()" *ngIf="false" class="menu-toggle rounded" [routerLink]=""><i class="bi bi-list" ></i></a>
 
     <router-outlet></router-outlet>
     <app-top></app-top>
