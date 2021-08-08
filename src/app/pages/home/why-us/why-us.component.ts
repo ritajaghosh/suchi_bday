@@ -9,7 +9,8 @@ import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 export class WhyUsComponent implements OnInit {
   avatar = {
     ritja: 'https://live.staticflickr.com/65535/50588567573_8d9e8f1502_o.jpg',
-    mou: 'https://live.staticflickr.com/65535/50589328831_be485ed9ce.jpg'
+    mou: 'https://live.staticflickr.com/65535/50589328831_be485ed9ce.jpg',
+    piyali: 'https://live.staticflickr.com/65535/51363382192_426b3a6d95_t.jpg'
   };
   videoURL = 'https://www.youtube.com/embed/xBXI-VKmXvQ';
   private safeURL: SafeResourceUrl;
