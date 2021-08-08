@@ -14,6 +14,10 @@
             <li class="nav-item active">
                 <a class="nav-link" routerLink="" fragment="wishes">Wishes <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="" fragment="trainers">Pictures <span class="sr-only">(current)</span></a>
+            </li>
+            
         </ul>
     </div>
     <div *ngIf="isDeviceXs">
@@ -28,6 +32,10 @@
                     routerLink="" fragment="wishes"
                     routerLinkActive="MyActiveMenu"
                     [routerLinkActiveOptions]="{exact: true}">Wishes</button>
+            <button mat-menu-item
+                    routerLink="" fragment="trainers"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Pictures</button>
 
 
         </mat-menu>
