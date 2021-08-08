@@ -17,7 +17,8 @@ export class WhyUsComponent implements OnInit {
     salini:   'https://live.staticflickr.com/65535/51363435432_b7d34d1ac2_t.jpg',
     didi:      'https://live.staticflickr.com/65535/51365153500_73c1f70b0f_t.jpg',
     ahana :  'https://live.staticflickr.com/65535/51364877759_2f96748dc9_t.jpg',
-
+    sreyo:  "https://live.staticflickr.com/65535/51364932234_97781fb325_t.jpg",
+    debjanimiss: "https://live.staticflickr.com/65535/51365153520_fd912a2cdd_t.jpg"
   };
   videoURL = 'https://www.youtube.com/embed/xBXI-VKmXvQ';
   private safeURL: SafeResourceUrl;
