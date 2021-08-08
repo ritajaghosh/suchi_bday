@@ -2,27 +2,36 @@
     <a class="navbar-brand" href="#">
         <div  class="avatar" [ngStyle]="{'background-image': 'url(' + 'https://live.staticflickr.com/65535/51360424816_9682e61242_t.jpg' + ')','background-size': 'cover'}"></div>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" >
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" routerLink="" fragment="portfolio">Test <span class="sr-only">(current)</span></a>
+                <a class="nav-link" routerLink="" fragment="top">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" routerLink="" fragment="wishes">Wishes <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" routerLink="" (click)="commonService.toggleDrawer()">Drawer <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
         </ul>
     </div>
+    <div *ngIf="isDeviceXs">
+
+        <button mat-button [matMenuTriggerFor]="belowMenu">Menu<mat-icon>more_vert</mat-icon></button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item
+                    routerLink="" fragment="top"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Home</button>
+            <button mat-menu-item
+                    routerLink="" fragment="wishes"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Wishes</button>
+
+
+        </mat-menu>
+    </div>
 </nav>
+
+

@@ -78,6 +78,7 @@ export class AppComponent implements OnInit, OnDestroy{
     this.mediaSub = this.mediaObserver.media$.subscribe(
         (result: MediaChange) => {
           this.deviceXs = (result.mqAlias === 'xs' ? true : false);
+          console.log('app component', this.deviceXs);
           this.commonService.setDeviceXs(this.deviceXs);
         }
       );

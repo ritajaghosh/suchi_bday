@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import {ActivatedRoute} from '@angular/router';
 import { CommonService } from 'src/app/services/common.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
