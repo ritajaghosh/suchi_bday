@@ -45,7 +45,7 @@ import {AosTestModule} from './aos-test/aos-test.module';
         _MatMenuDirectivesModule,
         MatMenuModule,
         PopoverModule,
-        AosTestModule
+        AosTestModule,
     ]
 })
 export class HomeModule { }
